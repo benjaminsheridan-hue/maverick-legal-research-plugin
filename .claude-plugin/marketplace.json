@@ -4,6 +4,7 @@
     "name": "Maverick Legal Research",
     "url": "https://mavericklegalresearch.com"
   },
+  "description": "Install Maverick's read-only primary-law research tools for Claude Code.",
   "plugins": [
     {
       "name": "maverick-legal-research",
