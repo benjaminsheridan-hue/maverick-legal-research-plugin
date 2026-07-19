@@ -1,0 +1,20 @@
+{
+  "name": "maverick-legal-research",
+  "interface": {
+    "displayName": "Maverick Legal Research"
+  },
+  "plugins": [
+    {
+      "name": "maverick-legal-research",
+      "source": {
+        "source": "local",
+        "path": "./plugins/maverick-legal-research"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

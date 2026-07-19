@@ -1,0 +1,13 @@
+interface:
+  display_name: "Maverick Legal Research"
+  short_description: "Research current US statutes and case law"
+  default_prompt: "Use $maverick-legal-research to research the controlling statutes and cases for this legal question."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "maverick"
+      description: "Maverick current statute, regulation, and case-law research"
+      transport: "streamable_http"
+      url: "https://api.mavericklegalresearch.com/mcp"
+policy:
+  allow_implicit_invocation: true

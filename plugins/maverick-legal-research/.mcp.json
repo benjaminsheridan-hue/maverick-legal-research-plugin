@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "maverick": {
+      "type": "http",
+      "url": "https://api.mavericklegalresearch.com/mcp"
+    }
+  }
+}

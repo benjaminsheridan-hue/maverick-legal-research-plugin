@@ -1,0 +1,32 @@
+{
+  "name": "maverick-legal-research",
+  "version": "0.1.0",
+  "description": "Research current US statutes, regulations, and case law from Codex or Claude Code.",
+  "author": {
+    "name": "Maverick Legal Research",
+    "url": "https://mavericklegalresearch.com"
+  },
+  "homepage": "https://mavericklegalresearch.com/connect",
+  "repository": "https://github.com/benjaminsheridan-hue/maverick-legal-research-plugin",
+  "license": "MIT",
+  "keywords": ["legal-research", "statutes", "case-law", "mcp"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Maverick Legal Research",
+    "shortDescription": "Research current US primary legal authorities.",
+    "longDescription": "Search Maverick's production statute, regulation, and CourtListener case-law indexes, then retrieve exact primary-authority text with provenance, freshness, and authority metadata.",
+    "developerName": "Maverick Legal Research",
+    "category": "Productivity",
+    "capabilities": ["Read", "Research"],
+    "websiteURL": "https://mavericklegalresearch.com",
+    "privacyPolicyURL": "https://mavericklegalresearch.com/privacy",
+    "termsOfServiceURL": "https://mavericklegalresearch.com/terms",
+    "defaultPrompt": [
+      "Research the controlling statutes and cases for this question.",
+      "Find and verify the primary authorities cited in this memo.",
+      "Compare the relevant federal and state authority."
+    ],
+    "brandColor": "#0B5D5E"
+  },
+  "mcpServers": "./.mcp.json"
+}
