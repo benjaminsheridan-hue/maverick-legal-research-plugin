@@ -17,8 +17,12 @@ results.
    descriptors before searching.
 2. Call `search_legal_authorities`. Pass the user's jurisdiction and, when known,
    `law_scope`, `federal_context`, `forum`, `case_scope="controlling_first"`, and
-   the legal `domain`. Use separate focused searches for distinct elements,
-   defenses, remedies, limitations periods, or procedural issues.
+   the legal `domain`. Set `corpora` explicitly when the requested source family
+   is known: `usc`, `cfr`, `state_statute`, or `state_admin_rule`. A federal
+   statutory question ordinarily starts with `corpora=["usc", "cfr"]`; do not
+   spend result slots on unrelated state sources. Use separate focused searches
+   for distinct elements, definitions, exclusions, defenses, remedies,
+   limitations periods, or procedural issues.
 3. Read `plan`, authority tiers, `provenance`, and every `degraded` entry before
    drawing conclusions. Treat a search hit as relevant, not automatically
    controlling. Explain a degraded corpus or incomplete authority lane. Treat
@@ -37,6 +41,37 @@ results.
    cite the returned source URL and include freshness/status metadata when it
    affects reliance. Never invent a citation, holding, quotation, or missing
    authority.
+
+## Completion check
+
+Before presenting substantive research as complete, confirm all of the
+following:
+
+- At least one focused authority search addressed each material issue.
+- Every statute or regulation materially relied on was resolved with
+  `get_statute_section`, including every chunk.
+- Every case whose holding or language materially supports the answer was
+  retrieved with `get_case_opinion`, including the selected opinion and every
+  needed chunk.
+- The response accounts for the applied plan, authority hierarchy, provenance,
+  and every degradation warning.
+- Any missing corpus, failed exact lookup, stale source, or unresolved conflict
+  is stated as a limitation.
+
+If a check fails, make a focused corrective search or fetch. Make at most two
+corrective passes for the same gap; after that, return a visible incomplete-
+research warning with the missing authority or corpus. Never convert a tool
+failure or an exhausted result set into an unqualified conclusion.
+
+## Supplemental sources
+
+Court rules, standing orders, administrative decisions, dockets, and secondary
+materials are not silently blended into the primary Maverick contract. If the
+host application exposes a separate supplemental-search tool, use it only when
+the question calls for those sources, label the results as supplemental, and
+keep its coverage and warnings separate. A supplemental tool must never be used
+to bypass a Maverick entitlement or to imply that an unavailable primary corpus
+was searched.
 
 ## Output discipline
 

@@ -5,8 +5,15 @@ research directly from Codex or Claude Code. The plugin includes a shared legal
 research skill and connects to the read-only remote MCP server at
 `https://api.mavericklegalresearch.com/mcp`.
 
+The server reports the stable `maverick-research-v1` contract. Its search tool
+supports explicit `usc`, `cfr`, `state_statute`, and `state_admin_rule` corpus
+scope; exact statute and case tools provide bounded full text for authorities
+used in the final work product.
+
 An active Maverick trial or subscription is required. OAuth is the default; a
-per-seat `msk_*` API key remains available for unattended environments.
+per-seat `msk_*` API key remains available for unattended environments and
+existing key-based clients can continue using it until their owner opts into
+OAuth.
 
 ## Codex
 
