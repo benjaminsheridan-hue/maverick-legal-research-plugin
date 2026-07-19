@@ -1,0 +1,13 @@
+{
+  "name": "maverick-legal-research",
+  "version": "0.1.0",
+  "description": "Research current US statutes, regulations, and case law with Maverick.",
+  "author": {
+    "name": "Maverick Legal Research",
+    "url": "https://mavericklegalresearch.com"
+  },
+  "homepage": "https://mavericklegalresearch.com/connect",
+  "repository": "https://github.com/benjaminsheridan-hue/maverick-legal-research-plugin",
+  "license": "MIT",
+  "keywords": ["legal-research", "statutes", "case-law", "mcp"]
+}

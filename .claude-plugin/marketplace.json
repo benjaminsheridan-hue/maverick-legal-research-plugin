@@ -1,0 +1,15 @@
+{
+  "name": "maverick-legal-research",
+  "owner": {
+    "name": "Maverick Legal Research",
+    "url": "https://mavericklegalresearch.com"
+  },
+  "plugins": [
+    {
+      "name": "maverick-legal-research",
+      "source": "./plugins/maverick-legal-research",
+      "description": "Research current US statutes, regulations, and case law with Maverick.",
+      "version": "0.1.0"
+    }
+  ]
+}
